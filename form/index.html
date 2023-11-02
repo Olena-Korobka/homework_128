@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form-row">
+                <label for="username">Повне ім’я</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-row">
+                <label for="password">Пароль:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-row">
+                <label for="password-again">Пароль щє раз:</label>
+                <input type="password" name="password" id="password-again">
+            </div>
+            <div class="form-row">
+                <label  for="gender">Стать</label>
+                <input type="radio" name="gender" id="gender" value="woman" checked>Жіноча
+                <input type="radio" name="gender" id="gender" value="man">Чоловіча
+            </div>
+            <div class="form-row">
+                <label for="eyars">Вік</label>
+                <input type="number" name="years" id="eyars" min="18" max="100">
+            </div>
+            <div class="form-row">
+                <label for="course">Курс</label>
+                <select name="course[]" id="course" size="1" multiple>
+                    <option value="" disabled selected>=Виберіть курс=</option>
+                    <option value="css">CSS</option>
+                    <option value="html">HTML</option>
+                    <option value="js">JavaSkript</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="adress">Повна адреса</label>
+                <textarea name="adress" id="adress" cols="20" rows="3"
+                    placeholder="Країна, регіон, селищє, вулиця."></textarea>
+            </div>
+            <div class="form-row">
+                <input type="checkbox" id="checkbox" name="checkbox" required>
+                <label for="checkbox">Я погоджусь з обробкою персональних даних</label>
+            </div>
+            <div class="button">
+                <input type="reset" value="Очистити форму">
+                <input type="submit" value="Зареєструватися">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -137,9 +137,10 @@ ul {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    
+
     /* line-height: 40px; */
 }
+
 .skills-list {
     font-size: 0;
 }
@@ -151,7 +152,7 @@ ul {
     width: 170px;
     font-size: 14px;
     vertical-align: top;
-    
+
 
 }
 
@@ -210,9 +211,11 @@ ul {
 .footer-container {
     padding-top: 100px;
 }
+
 footer .subtitle {
     padding-bottom: 20px;
 }
+
 button {
     display: inline-block;
     border: 1px solid #070707;
@@ -229,35 +232,39 @@ button {
     cursor: pointer;
     margin: 0 auto;
     display: block;
+    transition: all .2s ease;
 }
 
 button:hover {
     background-color: #F6F6F6;
     color: #000;
 }
+
 footer .text {
     padding-bottom: 20px;
 }
 
 .icons-list {
-width: 310px;
-margin: 30px auto 60px;
-font-size: 0;
+    width: 310px;
+    margin: 30px auto 60px;
+    font-size: 0;
 }
 
 .icons {
-      display: inline-block;
-      margin-left: 0;
+    display: inline-block;
+    margin-left: 0;
     width: 170px;
     font-size: 14px;
     vertical-align: top;
     width: 40px;
     height: 40px;
-  margin-right: 50px;
+    margin-right: 50px;
 }
+
 .icons:last-child {
     margin-right: 0;
 }
+
 .text.last {
     font-size: 14px;
 }
