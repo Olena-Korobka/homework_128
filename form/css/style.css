@@ -36,8 +36,15 @@ a {
     text-decoration: none;
 }
 
-
-
-
-
+.gender label{
+    display: inline;
 }
+
+.gender{
+display: flex;
+justify-content: space-between;
+padding-right: 45px;
+}
+
+
+
