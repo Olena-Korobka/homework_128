@@ -117,7 +117,7 @@ li:has(> input[type=checkbox]:checked) {
 }
 
 .section:active {
-    background: rgb(156, 17, 17);
+    background:#FF8984;
     transition: all 0.1s ease-in;
 }
 
