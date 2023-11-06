@@ -7,10 +7,7 @@
     margin: 0 auto;
     background-color: #4A4F56;
     padding: 23px 0 23px;
-    border-top: 10px solid white;
-    border-left: 10px solid white;
-    border-right: 10px solid white;
-}
+  }
 
 h1 {
     color: #FF8984;
@@ -34,12 +31,13 @@ h2 {
     line-height: 28px;
 }
 
-.container {
+body{
     background-color: #3B3F45;
-    padding: 40px 0 40px;
-    border-left: 10px solid white;
-    border-right: 10px solid white;
 }
+.container {
+    
+    padding: 40px 0 40px;
+  }
 
 .menu {
     margin: 0 auto;
@@ -141,10 +139,7 @@ footer {
     margin: 0 auto;
     background-color: #3B3F45;
     padding-bottom: 100px;
-    border-bottom: 10px solid white;
-    border-left: 10px solid white;
-    border-right: 10px solid white;
-}
+  }
 
 .text {
     margin: 0 auto;
