@@ -5,7 +5,7 @@
 }
 
 .container {
-    width: min(90% 1200px);
+    width: min(90%, 1200px);
     margin: 0 auto;
 }
 
@@ -213,7 +213,7 @@ ul.nav li:first-child {
     background-position: center;
     background-size: 100% 368px;
     height: 368px;
-    width: min(90% 1200px);
+    width: min(90%, 1200px);
     margin: 0 auto;
 }
 
