@@ -15,8 +15,9 @@ $text: #333333;
 }
 
 header {
-    padding: 0 ;
+    padding: 0;
     text-align: center;
+
     h1 {
         font-family: 'Raleway';
         font-size: 1.125rem;
@@ -27,6 +28,7 @@ header {
         color: $sub-text;
         padding-bottom: 15px;
     }
+
     span {
         font-family: 'Roboto';
         font-size: 3.75rem;
@@ -43,6 +45,7 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 32px;
+
     img.line {
         width: 210px;
     }
@@ -50,17 +53,13 @@ header {
 
 main .container {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding-top: 40px;
-   
+
 }
 
-
-
-
-
 .position {
-     position: relative;
+    position: relative;
     width: 430px;
     height: 430px;
     margin-top: 70px;
@@ -100,7 +99,6 @@ main .container {
         border-top: transparent;
     }
 
-
     .img {
         padding-left: 15px;
         padding-top: 15px;
@@ -108,20 +106,18 @@ main .container {
     }
 }
 
-
-.line-orange{
+.line-orange {
     width: 1px;
-height: 560px;
-background: $orange
-
+    height: 560px;
+    background: $orange
 }
-
 
 .content {
     display: block;
     text-align: center;
     width: 430px;
     margin-top: 70px;
+
     h2 {
         text-align: center;
         font-family: 'Roboto';
@@ -159,28 +155,28 @@ background: $orange
         line-height: 1.5rem;
         color: $text;
         padding-bottom: 20px;
-        
     }
-    .line{
+
+    .line {
         text-align: center;
         height: 4px;
         padding-bottom: 30px;
-       
+
     }
-    button{
+
+    button {
         text-align: center;
         font-family: 'Open Sans';
         font-size: 0.875rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 0.875rem; 
+        line-height: 0.875rem;
         text-transform: uppercase;
         color: $gray;
         padding: 5px 10px;
         border: 1px solid $orange;
         background-color: white;
-      
-        &:hover{
+        &:hover {
             background-color: $orange;
             border: 1px solid $text;
             cursor: pointer;
@@ -203,6 +199,3 @@ svg:hover circle {
 svg:hover path {
     fill: black;
 }
-
-
-   
