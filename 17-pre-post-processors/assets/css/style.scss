@@ -1,0 +1,14 @@
+$orange: #FFCC00;
+$sub-text: #898F8F;
+$gray:#666666;
+$text: #333333;
+*
+ {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
