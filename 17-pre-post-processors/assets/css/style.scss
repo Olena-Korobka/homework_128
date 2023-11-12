@@ -2,13 +2,207 @@ $orange: #FFCC00;
 $sub-text: #898F8F;
 $gray:#666666;
 $text: #333333;
-*
- {
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 .container {
     width: min(90%, 1170px);
     margin: 0 auto;
 }
+
+header {
+    padding: 0 ;
+    text-align: center;
+    h1 {
+        font-family: 'Raleway';
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        color: $sub-text;
+        padding-bottom: 15px;
+    }
+    span {
+        font-family: 'Roboto';
+        font-size: 3.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 4.125rem;
+        text-transform: uppercase;
+        color: $orange;
+
+    }
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    img.line {
+        width: 210px;
+    }
+}
+
+main .container {
+    display: flex;
+    justify-content:space-evenly;
+    padding-top: 40px;
+   
+}
+
+
+
+
+
+.position {
+     position: relative;
+    width: 430px;
+    height: 430px;
+    margin-top: 70px;
+
+    .figure {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid $orange;
+    }
+
+    .figure:nth-child(1) {
+        left: 0;
+        top: 0;
+        border-right: transparent;
+        border-bottom: transparent;
+    }
+
+    .figure:nth-child(2) {
+        right: 0;
+        top: 0;
+        border-left: transparent;
+        border-bottom: transparent;
+    }
+
+    .figure:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        border-left: transparent;
+        border-top: transparent;
+    }
+
+    .figure:nth-child(4) {
+        left: 0;
+        bottom: 0;
+        border-right: transparent;
+        border-top: transparent;
+    }
+
+
+    .img {
+        padding-left: 15px;
+        padding-top: 15px;
+        position: absolute;
+    }
+}
+
+
+.line-orange{
+    width: 1px;
+height: 560px;
+background: $orange
+
+}
+
+
+.content {
+    display: block;
+    text-align: center;
+    width: 430px;
+    margin-top: 70px;
+    h2 {
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: capitalize;
+        color: $gray;
+        padding-bottom: 20px;
+    }
+
+    img {
+        padding-bottom: 30px;
+    }
+
+    div.subtitle {
+        text-align: center;
+        font-family: 'Raleway';
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.25rem;
+        text-transform: capitalize;
+        color: $gray;
+        padding-bottom: 25px;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Raleway';
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5rem;
+        color: $text;
+        padding-bottom: 20px;
+        
+    }
+    .line{
+        text-align: center;
+        height: 4px;
+        padding-bottom: 30px;
+       
+    }
+    button{
+        text-align: center;
+        font-family: 'Open Sans';
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 0.875rem; 
+        text-transform: uppercase;
+        color: $gray;
+        padding: 5px 10px;
+        border: 1px solid $orange;
+        background-color: white;
+      
+        &:hover{
+            background-color: $orange;
+            border: 1px solid $text;
+            cursor: pointer;
+        }
+    }
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 40px;
+}
+
+svg:hover circle {
+    stroke: black;
+}
+
+svg:hover path {
+    fill: black;
+}
+
+
+   
