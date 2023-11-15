@@ -9,43 +9,43 @@ $text: #333333;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Raleway';
+}
+
 .container {
     width: min(90%, 1170px);
     margin: 0 auto;
 }
 
 header {
-    padding: 0;
     text-align: center;
-    padding-top: 40px;
+    margin-top: 40px;
 
     h1 {
-        font-family: 'Raleway';
         font-size: 1.125rem;
-        font-style: normal;
         font-weight: 500;
         line-height: 1.5rem;
         text-transform: uppercase;
         color: $sub-text;
-        padding-bottom: 15px;
+        margin-bottom: 15px;
     }
 
-    span {
+    div {
         font-family: 'Roboto';
         font-size: 3.75rem;
-        font-style: normal;
         font-weight: 900;
         line-height: 4.125rem;
         text-transform: uppercase;
         color: $orange;
-
+        margin-bottom: 32px;
     }
 }
 
 .pic {
     display: flex;
     justify-content: center;
-    padding-top: 32px;
+    margin: 0 3px;
 
     img.line {
         width: 210px;
@@ -56,7 +56,7 @@ main .container {
     display: flex;
     justify-content: space-evenly;
     padding-top: 40px;
-
+    margin-bottom: 100px;
 }
 
 .position {
@@ -75,29 +75,29 @@ main .container {
     .figure:nth-child(1) {
         left: 0;
         top: 0;
-        border-right: transparent;
-        border-bottom: transparent;
+        border-right: none;
+        border-bottom: none;
     }
 
     .figure:nth-child(2) {
         right: 0;
         top: 0;
-        border-left: transparent;
-        border-bottom: transparent;
+        border-left: none;
+        border-bottom: none;
     }
 
     .figure:nth-child(3) {
         right: 0;
         bottom: 0;
-        border-left: transparent;
-        border-top: transparent;
+        border-left: none;
+        border-top: none;
     }
 
     .figure:nth-child(4) {
         left: 0;
         bottom: 0;
-        border-right: transparent;
-        border-top: transparent;
+        border-right: none;
+        border-top: none;
     }
 
     .img {
@@ -120,56 +120,48 @@ main .container {
     margin-top: 70px;
 
     h2 {
-        text-align: center;
         font-family: 'Roboto';
         font-size: 2.25rem;
-        font-style: normal;
         font-weight: 900;
         line-height: normal;
-        text-transform: capitalize;
         color: $gray;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     img {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     div.subtitle {
         text-align: center;
-        font-family: 'Raleway';
         font-size: 1.5rem;
-        font-style: normal;
         font-weight: 400;
         line-height: 2.25rem;
-        text-transform: capitalize;
         color: $gray;
-        padding-bottom: 25px;
+        margin-bottom: 25px;
     }
 
     p {
         text-align: center;
-        font-family: 'Raleway';
+
         font-size: 0.875rem;
-        font-style: normal;
+
         font-weight: 500;
         line-height: 1.5rem;
         color: $text;
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     .line {
         text-align: center;
         height: 4px;
-        padding-bottom: 30px;
-
+        margin-bottom: 30px;
     }
 
-    button {
+    .btn {
         text-align: center;
         font-family: 'Open Sans';
         font-size: 0.875rem;
-        font-style: normal;
         font-weight: 700;
         line-height: 0.875rem;
         text-transform: uppercase;
@@ -177,6 +169,7 @@ main .container {
         padding: 5px 10px;
         border: 1px solid $orange;
         background-color: white;
+
         &:hover {
             background-color: $orange;
             border: 1px solid $text;
@@ -190,13 +183,15 @@ main .container {
     display: flex;
     justify-content: center;
     gap: 5px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
-svg:hover circle {
-    stroke: black;
-}
+a:hover svg {
+    circle {
+        stroke: black;
+    }
 
-svg:hover path {
-    fill: black;
+    path {
+        fill: black;
+    }
 }

@@ -60,13 +60,16 @@ li {
     font-size: 1.375rem;
     object-fit: contain;
     
+    
 }
 .section .cities li{
     border: 2px solid white;
+    
 }
 
 ul{
     border: 2px solid white;
+   
 }
 
 .cities:hover li:not(:hover){
