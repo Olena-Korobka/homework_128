@@ -72,7 +72,10 @@ input[type='checkbox'] {
         border-bottom: 3px solid transparent;
         transition: all .2s ease;
         &:hover {
-            background-color: $headings;
+            border-top: 2px solid #FFF;
+            border-bottom: 2px solid #FFF;
+            height: 100%;
+            transition: all 0.2s ease-in;
         }
         &:active {
             background-color: $headings;

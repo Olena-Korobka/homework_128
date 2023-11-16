@@ -29,6 +29,7 @@ header .container {
 .nav {
     display: flex;
     list-style: none;
+
 }
 
 ul.nav li {
@@ -45,6 +46,7 @@ ul.nav li a {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.75rem;
+    color: #2F281E;
 }
 
 ul.nav li:first-child {
@@ -81,7 +83,6 @@ ul.nav li:first-child {
     color: black;
     border: 1px solid #F90;
 }
-
 
 .btn-hover {
     color: #FFF;
@@ -210,15 +211,15 @@ ul.nav li:first-child {
     padding: 13px 40px;
 }
 
-footer .container {
+footer nav {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 70px;
 }
 
 footer li {
     list-style: none;
     color: #544837;
-    font-feature-settings: 'clig' off, 'liga' off;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.625rem;
@@ -261,6 +262,7 @@ input {
     height: 50px;
     border-radius: 4px;
     border: 1px solid #BCD0E5;
+    padding-left: 10px;
 }
 
 ::placeholder {

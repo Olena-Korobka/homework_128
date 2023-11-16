@@ -6,6 +6,7 @@ $border: #2B81AC;
 @font-face {
     font-family: 'Lucida';
     src: url('../font/Lucida\ Sans\ Unicode\ Regular.woff2') format('woff2');
+    font-weight: 400;
 }
 
 *,
@@ -17,7 +18,7 @@ $border: #2B81AC;
 }
 
 body {
-    font-family: 'Lucida, sans-sherif';
+    font-family: 'Lucida';
     background-color: $bg;
     border: 25px solid $border;
     min-height: 100vh;
@@ -60,7 +61,7 @@ h1 {
 
         .city {
             text-align: center;
-            padding: 24px 0 25px;
+            padding: 24px 0 30px;
             font-size: 1.375rem;
 
             &.blue {
@@ -108,19 +109,6 @@ h1 {
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             .title {
                 margin-bottom: 4px;
             }
@@ -133,6 +121,7 @@ h1 {
                 font-size: 2.625rem;
                 vertical-align: middle;
                 margin-left: 11px;
+                margin-bottom: 8px;
             }
         }
 
