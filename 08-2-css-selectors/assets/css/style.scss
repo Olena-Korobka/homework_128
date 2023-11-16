@@ -68,14 +68,16 @@ input[type='checkbox'] {
         font-size: 1.6875rem;
         line-height: 2rem;
         color: #fff;
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
         transition: all .2s ease;
+        font-weight: bold;
         &:hover {
             border-top: 2px solid #FFF;
             border-bottom: 2px solid #FFF;
             height: 100%;
             transition: all 0.2s ease-in;
+           
         }
         &:active {
             background-color: $headings;
