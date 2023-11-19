@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 120px auto;
+    width: min(90%, 1170px);
+}
+
+.title {
+    color: #000;
+    text-align: center;
+    font-family: 'Delius Unicase';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.1125rem;
+    margin-bottom: 80px;
+}
+
+ul {
+    list-style: none;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.cities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.nature {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.people {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.image {
+    img {
+        border-radius: 20px;
+    }
+}
+
+.colspan {
+    grid-column: span 2;
+}
+
+.rowspan {
+    grid-row: span 2;
+}
+
+@media screen and (max-width: 500px) {
+
+    .cities,
+    .nature,
+    .people {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .colspan {
+        grid-column: span 1;
+    }
+
+    .rowspan {
+        grid-row: span 1;
+    }
+}
