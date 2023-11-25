@@ -16,13 +16,15 @@
 body {
     color: #000;
     font-family: 'PT Sans';
-        margin-top: 160px;
-        background: url(../img/bg-picture.svg);
-        background-repeat: no-repeat;
-        background-position: 90% 160px;
-        background-attachment: fixed;
-        background-size:auto;
-           }
+    margin-top: 160px;
+    background: url(../img/bg-picture.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 160px;
+    background-attachment: fixed;
+    background-size: auto;
+    background-size: 760px 100%;
+    margin: 0 auto;
+}
 
 header.container {
     margin-top: 13px;
@@ -93,6 +95,7 @@ main .container {
     align-items: flex-start;
     justify-content: baseline;
     gap: 30px;
+    margin-top: 180px;
 
     .aside {
         position: sticky;
@@ -108,14 +111,13 @@ main .container {
             list-style: none;
 
             li {
-                margin-bottom: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 70px;
+                border-bottom: 2px solid black;
             }
         }
 
-        hr {
-            margin-bottom: 70px;
-            width: 365px;
-        }
+
     }
 
     div .line {
@@ -177,13 +179,4 @@ main .container {
         }
     }
 
-}
-.bgr {
-    // background: url(../img/bg-picture.svg);
-    // background-repeat: no-repeat;
-    // background-position: 90% 160px;
-    // background-attachment: fixed;
-    // background-size:auto;
-
-   
 }
