@@ -1,7 +1,9 @@
+@import '_fonts';
+
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
 .container {
     margin: 120px auto;
@@ -22,17 +24,17 @@
 
 ul {
     list-style: none;
-    opacity: 0.8;
-
-    &:hover {
-        opacity: 1;
-    }
+    opacity: 0.9;
 }
 
-.galery{
+.galery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    &:hover li:not(:hover) {
+        opacity: .7;
+    }
 }
 
 .image img {
@@ -64,4 +66,61 @@ ul {
     .rowspan {
         grid-row: span 1;
     }
+}
+
+.block {
+    position: relative;
+    overflow: hidden;
+
+    .name,
+    .time {
+        position: absolute;
+        font-family: 'Roboto';
+        font-size: 1.25rem;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .name {
+        bottom: 20px;
+        left: 20px;
+        font-weight: 500;
+        color: white;
+    }
+
+    .time {
+        bottom: 20px;
+        right: 20px;
+        font-weight: 400;
+        color: #E0E0E0;
+    }
+
+    .like,
+    .download {
+        position: absolute;
+        transform: translateY(0);
+        transition: all .5s ease;
+        top: -40px;
+        width: 40px;
+        aspect-ratio: 1;
+        cursor: pointer;
+    }
+}
+
+.like {
+    left: 20px;
+    background-image: url(../img/heart.svg);
+}
+
+.download {
+    right: 20px;
+    background-image: url(../img/download.svg);
+}
+
+.image:hover .like {
+    transform: translateY(150%);
+}
+
+.image:hover .download {
+    transform: translateY(150%);
 }
