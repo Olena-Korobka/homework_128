@@ -1,0 +1,268 @@
+@import '_fonts';
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.00625rem;
+}
+
+button {
+    transition: all .2s ease;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #007bff;
+    border: 1px solid #007BFF;
+    color: #FFF;
+}
+
+button:focus {
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+}
+
+.container {
+    width: min(90%, 1440px);
+    margin: 55px auto;
+}
+
+main .container {
+    display: flex;
+    gap: 30px;
+
+}
+
+fieldset {
+    border: none;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 0.9375rem;
+    color: #545454;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem;
+    letter-spacing: -0.0125rem;
+    background-color: #E4E4E4;
+}
+
+main {
+    legend {
+        color: #1C1C1C;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2rem;
+        letter-spacing: -0.025rem;
+        margin-bottom: 20px;
+    }
+
+    .left-form,
+    .right-form {
+        background-color: #FFFFFF;
+    }
+
+    form {
+        margin: 35px 36px 20px;
+    }
+
+    .text,
+    .some-text {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    hr {
+        margin-bottom: 20px;
+    }
+
+    .some-text {
+        margin-right: 20px;
+
+        & a {
+            font-family: 'Roboto';
+            font-weight: 500;
+        }
+    }
+}
+
+.form-row-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 245px;
+    height: 38px;
+    margin-bottom: 40px;
+
+    &.max-width {
+        width: 500px;
+        margin-bottom: 40px;
+    }
+
+    input,
+    select {
+        height: 38px;
+        padding: 7px 10px;
+        border-radius: 8px;
+        color: #545454;
+        border: 1px solid #545454;
+    }
+}
+
+.hint {
+    color: #969696;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    letter-spacing: -0.00625rem;
+}
+
+.genger-group {
+    margin: 20px 0;
+    display: flex;
+    gap: 8px;
+
+    .radiobutton {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #e4e4e4;
+        border-radius: 20px;
+        display: block;
+        cursor: pointer;
+        margin-right: 8px;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+}
+
+.left {
+    margin-right: 20px;
+}
+
+select {
+    color: #E4E4E4;
+    font-family: 'Inter';
+    appearance: none;
+    background-image: url(../img/Right.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 220px;
+}
+
+button {
+    width: 100%;
+    height: 38px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    letter-spacing: -0.00625rem;
+    margin-bottom: 40px;
+}
+
+.form-foto {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .up-to {
+        display: flex;
+        flex-wrap: wrap;
+        width: 155px;
+        color: #969696;
+        font-size: 0.8125rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        letter-spacing: -0.00625rem;
+    }
+
+    input {
+        height: 30px;
+        padding: 7px 10px;
+        border-radius: 8px;
+        color: #545454;
+        // border: 1px solid  #E4E4E4;
+        background-color: #FFFFFF;
+        background-image: url(../img/Camera.svg);
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 110px;
+        height: 30px;
+        width: 138px;
+        margin-top: 15px;
+    }
+
+    button {
+        background-color: #FFFFFF;
+        border-color: #E4E4E4;
+        background-image: url(../img/Trash1.svg);
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 5px;
+        height: 30px;
+        width: 30px;
+        margin-top: 15px;
+    }
+}
+
+.blye:focus {
+    outline: 2px solid #007BFF;
+}
+// .wiht-plugin:focus {
+//     outline: 2px solid #007BFF;
+// }
+// намагалась на селект с плагіном зробити фокус
+.button-small {
+    width: 150px;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border-radius: 8px;
+    height: 30px;
+    appearance: none;
+    background-image: url(../img/Right.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 220px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #E4E4E4;
+    line-height: 28px;
+    font-family: 'Inter';
+    padding-top: 2px;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem;
+    letter-spacing: -0.0125rem;
+}

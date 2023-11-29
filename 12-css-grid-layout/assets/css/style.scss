@@ -71,6 +71,14 @@ ul {
 .block {
     position: relative;
     overflow: hidden;
+    img{
+        transition: all .4s ease;
+    }
+    &:hover{
+        img{
+            scale: 1.2;
+        }
+    }
 
     .name,
     .time {
