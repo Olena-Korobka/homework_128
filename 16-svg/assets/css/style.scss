@@ -1,0 +1,168 @@
+@import '_fonts';
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a,
+button {
+    transition: all .2s ease;
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
+
+body {
+    color: var(--text, #16133D);
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header {
+    border-bottom: 1px solid #EFEEF3;
+
+    .logo {
+        margin: 22px 0;
+    }
+}
+
+main {
+    .container {
+        .title {
+            color: var(--7, #7690A8);
+            line-height: 1.3125rem;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-family: 'Nunito Sans';
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 3.25rem;
+            letter-spacing: 0.0125rem;
+            margin-top: 15px;
+            margin-bottom: 40px;
+        }
+
+    }
+
+}
+
+.block {
+    display: flex;
+    gap: 30px;
+}
+
+.section {
+    display: inline-block;
+    border: 1px solid #E5EAF4;
+    border-radius: 8px;
+    background: #FFF;
+    margin-bottom: 100px;
+
+    &:hover {
+        border: 1px solid #3DB370;
+
+        .svg {
+            path {
+                stroke: #52C29D;
+            }
+        }
+    }
+
+    .content {
+        margin: 40px;
+        border-radius: 8px;
+
+    }
+
+    .icon {
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.33rem;
+        letter-spacing: 0.0125rem;
+        margin-bottom: 15px;
+    }
+
+    p {
+        line-height: 1.75rem;
+        margin-bottom: 30px;
+    }
+
+    a {
+        color: #3DB370;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: normal;
+
+        &:hover {
+            text-decoration: underline #3DB370;
+        }
+    }
+
+}
+
+footer {
+    background: var(--6, #16133D);
+
+    .logo {
+        margin: 40px 0;
+    }
+
+    ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    a:hover {
+        path {
+            fill: #3DB370;
+        }
+    }
+
+    .contacts {
+        border-radius: 5px;
+        background: var(--1, #EFEEF3);
+        width: 38px;
+        aspect-ratio: 1;
+        position: relative;
+        margin-bottom: 40px;
+
+        .nav {
+            top: 50%;
+            left: 50%;
+
+            position: absolute;
+            translate: (-50% -50%);
+
+        }
+
+    }
+}
