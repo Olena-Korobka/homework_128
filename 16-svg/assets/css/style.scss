@@ -86,12 +86,6 @@ main {
 
     &:hover {
         border: 1px solid #3DB370;
-
-        .svg {
-            path {
-                stroke: #52C29D;
-            }
-        }
     }
 
     .content {
@@ -100,12 +94,10 @@ main {
 
     }
 
-    .icon {
-        margin-bottom: 30px;
-    }
-
     h3 {
+
         font-size: 1.5rem;
+        font-weight: 400;
         line-height: 1.33rem;
         letter-spacing: 0.0125rem;
         margin-bottom: 15px;
@@ -127,6 +119,40 @@ main {
         }
     }
 
+}
+
+.icon-wrap {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5EAF4;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    .green-icon {
+        display: none;
+    }
+
+}
+
+.green-icon,
+.blue-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.section:hover {
+    .icon-wrap {
+        .blue-icon {
+            display: none;
+        }
+
+        .green-icon {
+            display: block;
+        }
+    }
 }
 
 footer {
