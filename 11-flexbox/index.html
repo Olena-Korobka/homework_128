@@ -8,10 +8,39 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 
-<body>
+<body >
+    <div class="page_overlay">
+
+    </div>
+    <div class="menu_panel">
+        <div class="panel_top">
+            <a href=" #"><img src="./assets/img/Logo.svg" alt="logo"> </a>
+            <div class="hamburger_wrap">
+                <button id="hamb_btn_mobile" class="hamburger hamburger--squeeze is-active" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <nav>
+            <ul class="mobile_menu">
+                <li><a href="#" target="_blank" rel="noreferrer">Product</a></li>
+                <li><a href="#" target="_blank" rel="noreferrer">Customers</a></li>
+                <li><a href="#" target="_blank" rel="noreferrer">Pricing</a></li>
+                <li><a href="#" target="_blank" rel="noreferrer">Resources</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+
     <header>
         <div class="container">
             <a href=" #"><img src="./assets/img/Logo.svg" alt="logo"> </a>
@@ -27,11 +56,18 @@
                 <button type="button">Sign In</button>
                 <button type="button">Sign Up</button>
             </div>
+            <div class="hamburger_wrap">
+                <button id="hamb_btn" class="hamburger hamburger--squeeze " type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
         </div>
     </header>
     <main>
         <section id="top">
-            <div class="container">
+            <div class="container section">
                 <div class="text">
                     <h1>The Design Thinking superpowers</h1>
                     <p>Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to
@@ -41,7 +77,7 @@
                     <button type="button" class="btn-hover">Get started</button>
                 </div>
                 <div class="img">
-                    <img src="./assets/img/Image.svg" alt="people">
+                    <img src="./assets/img/Image-people.svg" alt="people">
                 </div>
             </div>
         </section>
@@ -80,7 +116,89 @@
                 <button type="button" class="btn-hover">Sign up Now</button>
             </div>
         </section>
+        <section id="professionals">
+            <div class="container section">
+                <div class="text">
+                    <p class="small-text">Effortless Validation for</p>
+                    <h2>Design Professionals</h2>
+                    <p>The Myspace page defines the individual, his or her characteristics, traits, personal choices and
+                        the overall personality of the person.</p>
+                    <h3> Accessory makers</h3>
+                    <p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun
+                    </p>
+                    <h3>Alterationists</h3>
+                    <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
+                    <h3>Custom Design designers</h3>
+                    <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
+
+                </div>
+                <div class="img">
+                    <img src="./assets/img/Image-man.svg" alt="people">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="managerss">
+            <div class="container section">
+                <div class="img">
+                    <img src="./assets/img/Image-man2.svg" alt="people">
+                </div>
+                <div class="text">
+                    <p class="small-text">Easier decision making forr</p>
+                    <h2>Product Managers</h2>
+                    <p>The Myspace page defines the individual, his or her characteristics, traits, personal choices and
+                        the overall personality of the person.</p>
+                    <h3> Accessory makers</h3>
+                    <p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun
+                    </p>
+                    <h3>Alterationists</h3>
+                    <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
+                    <h3>Custom Design designers</h3>
+                    <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="marketers">
+            <div class="container section">
+                <div class="text">
+                    <p class="small-text">Optimisation for</p>
+                    <h2>Marketers</h2>
+                    <p>Few would argue that, despite the advancements of feminism over the past three decades, women
+                        still face a double standard when it comes to their behavior. </p>
+                    <h3>Accessory makers</h3>
+                    <p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the fun
+                    </p>
+                    <h3>Alterationists</h3>
+                    <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
+                    <h3>Custom Design designers</h3>
+                    <p>If you are looking for a new way to promote your business that won’t cost you more money, </p>
+
+                </div>
+                <div class="img">
+                    <img src="./assets/img/Image-man3.svg" alt="people">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
     </main>
+
+
+
+
+
+
+
+
+
     <footer>
         <div class="container">
             <nav>
@@ -115,9 +233,27 @@
                         </div>
                     </form>
                 </div>
+
+
             </nav>
         </div>
     </footer>
+
+    <script>
+        // document.getElementById('hamb_btn').addEventListener('clic', function(){
+        //         document.body.classlist.toggle('open_mobile_menu')
+        //     })
+
+        //     document.getElementById('hamb_btn_mobile').addEventListener('clic', function(){
+        //         document.body.classlist.toggle('open_mobile_menu')
+        //     })
+        function toggleMobileNav(){
+        document.body.classList.toggle('open_mobile_menu')
+        window.hamb_btn.classList.toggle('is-active')
+    }
+    window.hamb_btn.addEventListener('click', toggleMobileNav)
+    window.hamb_btn_mobile.addEventListener('click', toggleMobileNav)
+    </script>
 </body>
 
 </html>
