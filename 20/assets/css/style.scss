@@ -199,6 +199,9 @@ a:hover {
     .pic-wrap{
         aspect-ratio: 70/38;
     }
+    .project-overview p {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 768px) {
     h1 {
@@ -207,9 +210,7 @@ a:hover {
         letter-spacing: 0.10313rem;
     }
 
-    .project-overview p {
-        width: 100%;
-    }
+  
 
     footer .container {
         display: block;
