@@ -106,6 +106,7 @@ p {
 
 .pic-wrap {
     margin-bottom: 20px;
+    aspect-ratio: 117/50;
 }
 
 
@@ -194,9 +195,9 @@ a:hover {
     margin-bottom: 30px;
 }
 
-@media screen and (max-width: 1200px){
-    .project-overview p {
-        width: 100%;
+@media screen and (max-width: 992px){
+    .pic-wrap{
+        aspect-ratio: 70/38;
     }
 }
 @media screen and (max-width: 768px) {
@@ -237,9 +238,14 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 420px)
+ {
+   .pic-wrap{
+    aspect-ratio: 1;
+   }
     .container {
         margin: 0 10px;
+        
     }
 
     h1 {
@@ -253,16 +259,6 @@ a:hover {
         font-weight: 400;
         letter-spacing: 0.1rem;
     }
-}
-
-@media screen and (max-width: 320px) {
-
-    h1 {
-        font-size: 1.875rem;
-        line-height: 3.125rem;
-        letter-spacing: 0.09375rem;
-    }
-
     h2 {
         font-size: 1.625rem;
         line-height: 166%;
@@ -276,3 +272,4 @@ a:hover {
         letter-spacing: 0.05rem;
     }
 }
+
