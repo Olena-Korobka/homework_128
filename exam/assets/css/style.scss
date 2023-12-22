@@ -879,6 +879,47 @@ footer .container {
         }
     }
 
+    .promises     {
+        margin-bottom: 200px;
+        .photo {
+            display: none;
+        }
+
+        .info-content {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 0 auto;
+            background: url(../img/features-background-image-bg-3-min.jpg);
+            color: #fff;
+
+            .info-content-left {
+                width: 100%;
+
+                .mb-70 {
+                    margin-bottom: 70px;
+                }
+            }
+
+            .info-content-right {
+                .mb-130 {
+                    margin-bottom: 70px;
+                }
+            }
+
+            .subtitle-info {
+                color: #fff;
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+            }
+        }
+
+        .border-button {
+            width: 200px;
+        }
+    }
+
     .contact {
         margin-bottom: 80px;
 
@@ -906,7 +947,9 @@ footer .container {
             font-size: 1.5rem;
         }
     }
-
+.video{
+    margin-bottom: 200px;
+}
     footer .container {
         .footer-right-part {
             .footer-nav {
@@ -950,9 +993,13 @@ footer .container {
         display: none;
     }
 
+
+ 
+
+
     .info,
     .promises {
-        margin-bottom: 50px;
+        margin-bottom: 180px;
 
         .subtitle-info {
             font-size: 2rem;
@@ -983,7 +1030,7 @@ footer .container {
     }
 
     .video {
-        margin-bottom: 80px;
+        margin-bottom: 200px;
     }
 
     .reviews {
@@ -1041,48 +1088,13 @@ footer .container {
     .quote {
         margin-bottom: 80px;
     }
-
-    .promises {
-        .photo {
-            display: none;
-        }
-
-        .info-content {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin: 0 auto;
-            background: url(../img/features-background-image-bg-3-min.jpg);
-            color: #fff;
-
-            .info-content-left {
-                width: 100%;
-
-                .mb-70 {
-                    margin-bottom: 70px;
-                }
-            }
-
-            .info-content-right {
-                .mb-130 {
-                    margin-bottom: 70px;
-                }
-            }
-
-            .subtitle-info {
-                color: #fff;
-                font-size: 1.3rem;
-                line-height: 1.5rem;
-            }
-        }
-
-        .border-button {
-            width: 200px;
-        }
-    }
+.promises{
+    margin-bottom: 50px;
+}
+  
 
     .video {
+        margin-bottom: 50px;
         .video-content {
             width: 100%;
             margin: 0 auto;
@@ -1094,7 +1106,8 @@ footer .container {
     }
 
     .reviews {
-        margin-bottom: 60px;
+        margin-bottom: 100px;
+       
 
         .reviews-text {
             width: 100%;
