@@ -1,0 +1,5 @@
+User-agent: *
+
+Sitamap:https://olena-korobka.github.io/homework_128//exam/sitemap.xml
+
+Host: olena-korobka.github.io
