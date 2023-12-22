@@ -377,7 +377,7 @@ h2 {
 
 
         &::before {
-            content: url(/assets/img/quote-icon.svg);
+            content: url(../img/quote-icon.svg);
             display: inline-block;
             width: 100%;
             position: absolute;
@@ -1040,7 +1040,7 @@ footer .container {
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin: 0 auto;
-            background: url(/assets/img/features-background-image-bg-3-min.jpg);
+            background: url(./assets/img/features-background-image-bg-3-min.jpg);
             color: #fff;
 
             .info-content-left {
@@ -1300,7 +1300,7 @@ footer .container {
     color: #fff;
 
     .page-wrapper {
-        background-image: url(/assets/img/first-screen-image-dark-min-min.jpg) !important;
+        background-image: url(../img/first-screen-image-dark-min-min.jpg) !important;
     }
 
     header {
@@ -1402,7 +1402,7 @@ footer .container {
             color: #FFF;
 
             &::before {
-                content: url(/assets/img/quote-icon-dark.svg);
+                content: url(../img/quote-icon-dark.svg);
             }
         }
 
