@@ -16,8 +16,6 @@ ol {
 
 img {
     vertical-align: top;
-    // width: 100%;
-    // height: 100%;
     object-fit: cover;
 }
 
@@ -134,7 +132,7 @@ main {
     flex-grow: 1;
 }
 
-//первая секция
+//перша секція
 .primary {
     display: block;
     margin-top: 144px;
@@ -158,7 +156,6 @@ main {
     }
 
     p {
-        // width: calc(100% - 731px);
         width: 439px;
         margin-bottom: 50px;
     }
@@ -209,7 +206,7 @@ main {
     }
 }
 
-//2 секция инфо
+//2 секція інфо
 
 .photo-primary {
     width: 100%;
@@ -300,7 +297,7 @@ p {
         width: 100px;
         position: absolute;
         left: 50%;
-        bottom: -40px; //провекрить пп
+        bottom: -40px;
         height: 1px;
         background: #85BBB1;
         transform: translateX(-50%);
@@ -315,7 +312,7 @@ p {
     margin-top: 20px;
 }
 
-//третья секция
+//третя секція
 
 .benefists {
     display: grid;
@@ -349,12 +346,11 @@ h2 {
     }
 }
 
-// четвертая секция
+// четверта секція
 .quote {
     // background-repeat: no-repeat;
     background-size: 100%;
     margin-bottom: 120px;
-
 
     .content {
         margin-left: 160px;
@@ -374,7 +370,6 @@ h2 {
         margin-bottom: 40px;
         position: relative;
         display: inline-block;
-
 
         &::before {
             content: url(../img/quote-icon.svg);
@@ -397,7 +392,7 @@ h2 {
     }
 }
 
-// пятая секция
+// п'ятая секція
 .video {
     margin-bottom: 120px;
 }
@@ -466,7 +461,7 @@ h2 {
     }
 }
 
-// шестая секция
+// шоста секція
 .promises {
 
     .subtitle-info {
@@ -522,7 +517,7 @@ h2 {
     width: 300px;
 }
 
-//седьмая секция
+//сьома секція
 .reviews {
     margin-bottom: 100px;
 }
@@ -535,7 +530,6 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
 }
 
 .reiews-block-photo {
@@ -557,7 +551,6 @@ h2 {
         font-weight: 400;
         line-height: 1.625rem;
         margin: 30px 40px;
-        // width: 290px;
 
         &.name {
             font-family: 'Playfair Display';
@@ -572,7 +565,7 @@ h2 {
 }
 
 
-//восьмая секция
+//восьма секція
 .contact {
     display: flex;
     justify-content: space-between;
@@ -682,7 +675,7 @@ footer .container {
     }
 }
 
-//анимация
+//анімація
 .animate__zoomOut {
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
@@ -764,7 +757,7 @@ footer .container {
     }
 }
 
-//респонсив
+//респонсів
 @media screen and (max-width: 1150px) {
     .promises {
 
@@ -798,8 +791,6 @@ footer .container {
         }
     }
 }
-
-
 
 @media screen and (max-width: 1050px) {
     .primary {
@@ -841,7 +832,6 @@ footer .container {
         row-gap: 0px;
     }
 }
-
 
 @media screen and (max-width: 950px) {
     .primary {
@@ -902,7 +892,6 @@ footer .container {
         }
     }
 }
-
 
 @media screen and (max-width: 850px) {
     .hamburger {
@@ -984,7 +973,6 @@ footer .container {
         margin-bottom: 40px;
     }
 }
-
 
 @media screen and (max-width: 750px) {
     h2 {
@@ -1117,7 +1105,6 @@ footer .container {
     }
 }
 
-
 @media screen and (max-width: 600px) {
     .primary {
         h1 {
@@ -1158,7 +1145,6 @@ footer .container {
             font-size: 1.4rem;
             line-height: 1rem;
         }
-
     }
 
     .primary {
@@ -1221,15 +1207,10 @@ footer .container {
                 .mb-70 {
                     margin-bottom: 20px;
                 }
-
             }
-
         }
-
     }
-
 }
-
 
 
 @media screen and (max-width: 500px) {
@@ -1237,7 +1218,6 @@ footer .container {
         .content {
             padding-bottom: 20px;
             width: calc(100% - 180px);
-
         }
 
         .quote-text {
@@ -1255,11 +1235,7 @@ footer .container {
             font-size: 1rem;
         }
     }
-
-
-
 }
-
 
 @media screen and (max-width: 400px) {
     .primary {
@@ -1275,25 +1251,16 @@ footer .container {
             font-size: 1.2rem;
             line-height: 1.25rem;
             margin-bottom: 10px;
-
         }
-
-
-
     }
 
     .btn button {
         font-size: 1rem;
     }
-
 }
 
 
-
-
-
-
-//темная тема
+//темна тема
 
 .dark-theme {
     background-color: #161926;
@@ -1313,7 +1280,6 @@ footer .container {
 
             &::after {
                 background: #53F3CD;
-
             }
         }
     }
@@ -1461,7 +1427,6 @@ footer .container {
 
         label {
             color: #fff;
-
         }
 
         input:focus,
@@ -1471,7 +1436,6 @@ footer .container {
 
         input:focus~label,
         input:not(:placeholder-shown)~label {
-
             color: #fff;
         }
     }
@@ -1491,16 +1455,12 @@ footer .container {
 
     .mobile_menu {
         a {
-
-
             &:hover {
                 background-color: #75c5b2;
             }
         }
     }
 }
-
-
 
 
 // чекбокс
