@@ -16,7 +16,8 @@ ol {
 
 img {
     vertical-align: top;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 a,
@@ -53,13 +54,15 @@ body {
 }
 
 header {
+    position: -webkit-sticky;
     position: sticky;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 10;
     background: linear-gradient(270deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(255, 255, 255, 0.00) 47.19%), rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+            backdrop-filter: blur(4.5px);
     margin-top: 30px;
 
     .hamburger_wrap {
@@ -677,10 +680,14 @@ footer .container {
 
 //анімація
 .animate__zoomOut {
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-delay: 1s;
-    animation-duration: 0.7s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
 }
 
 //бургер
