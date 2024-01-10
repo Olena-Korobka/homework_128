@@ -2,69 +2,75 @@
 
 // Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
 function task1() {
-  var year = prompt("\u0412\u043A\u0456\u0436\u0456\u0442\u044C \u0412\u0430\u0448 \u0432\u0456\u043A - \u0456 \u044F \u0441\u043A\u0430\u0436\u0443, \u0445\u0442\u043E \u0412\u0438)");
+  var year = prompt('Вкажіть Ваш вік - і я скажу, хто Ви)');
+  var res;
 
   if (year < 12) {
-    alert("\u0412\u0438 \u0434\u0438\u0442\u0438\u043D\u0430.");
+    res = 'Ви дитина.';
   } else if (year >= 12 && year < 18) {
-    alert("\u0412\u0438 \u043F\u0456\u0434\u043B\u0456\u0442\u043E\u043A.");
+    res = 'Ви підліток.';
   } else if (year >= 18 && year < 60) {
-    alert("\u0412\u0438 \u0434\u043E\u0440\u043E\u0441\u043B\u0438\u0439.");
+    res = 'Ви дорослий.';
   } else if (year >= 60 && year < 110) {
-    alert("\u0412\u0438 \u043F\u0435\u043D\u0441\u0456\u043E\u043D\u0435\u0440.");
+    res = 'Ви пенсіонер.';
   } else {
-    alert("\u0412\u0438 \u0432\u0432\u0435\u043B\u0438 \u043D\u0435\u043A\u043E\u0440\u0435\u043A\u0442\u043D\u0456 \u0434\u0430\u043D\u0456.");
+    res = 'Ви ввели некоректні дані.';
   }
+
+  alert("".concat(res));
 } // Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
 
 
 function task2() {
   var numberSymbol = prompt("\u041D\u0430\u043F\u0438\u0448\u0456\u0442\u044C \u0447\u0438\u0441\u043B\u043E \u0432\u0456\u0434 0 \u0434\u043E 9, \u0430 \u044F \u043F\u043E\u043A\u0430\u0436\u0443 \u0412\u0430\u043C \u0441\u043F\u0435\u0446\u0441\u0438\u043C\u0432\u043E\u043B, \u044F\u043A\u0438\u0439 \u0440\u043E\u0437\u0442\u0430\u0448\u043E\u0432\u0430\u043D\u0438\u0439 \u043D\u0430 \u0446\u0456\u0439 \u043A\u043B\u0430\u0432\u0456\u0448\u0456.");
+  var res;
 
   switch (numberSymbol) {
     case "1":
-      alert("!");
+      res = '!';
       break;
 
     case "2":
-      alert("@");
+      res = '@';
       break;
 
     case "3":
-      alert("#");
+      res = '#';
       break;
 
     case "4":
-      alert("$");
+      res = '$';
       break;
 
     case "5":
-      alert("%");
+      res = '%';
       break;
 
     case "6":
-      alert("^");
+      res = '^';
       break;
 
     case "7":
-      alert("&");
+      res = '&';
       break;
 
     case "8":
-      alert("*");
+      res = '*';
       break;
 
     case "9":
-      alert("(");
+      res('(');
       break;
 
     case "0":
-      alert(")");
+      res = ')';
       break;
 
     default:
-      alert("\u0412\u0438 \u0432\u0432\u0435\u043B\u0438 \u043D\u0435\u043A\u043E\u0440\u0435\u043A\u0442\u043D\u0456 \u0434\u0430\u043D\u0456.");
+      res = 'Ви ввели некоректні дані.';
   }
+
+  alert("".concat(res));
 } // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
 
 
@@ -123,15 +129,15 @@ function task5() {
     return;
   }
 
-  var x = '';
+  var result = '';
 
   for (var i = 1; i <= userNumber; i++) {
     if (userNumber % i == 0) {
-      x += ' ' + i;
+      result += ' ' + i;
     }
   }
 
-  alert("\u0414\u0456\u043B\u044C\u043D\u0438\u043A\u0438 \u0446\u044C\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430: ".concat(x));
+  alert("\u0414\u0456\u043B\u044C\u043D\u0438\u043A\u0438 \u0446\u044C\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430: ".concat(result));
 } //Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
 
 
@@ -189,16 +195,17 @@ function task8() {
   var zero = 0;
   var par = 0;
   var notPar = 0;
+  var i = 1;
 
-  for (var i = 1; i <= 10; i++) {
+  do {
     var number = parseInt(prompt("\u041D\u0430\u043F\u0438\u0448\u0456\u0442\u044C ".concat(i, " \u0447\u0438\u0441\u043Bo")));
 
     if (isNaN(number)) {
       alert("\u0412\u0438 \u0432\u0432\u0435\u043B\u0438 \u043D\u0435 \u0447\u0438\u0441\u043Bo.");
-      return;
+      continue;
     }
 
-    if (number == 0) {
+    if (number === 0) {
       zero++;
     } else if (number > 0) {
       positiv++;
@@ -207,15 +214,17 @@ function task8() {
     }
 
     if (number !== 0) {
-      if (number % 2 == 0) {
+      if (number % 2 === 0) {
         par++;
       } else {
         notPar++;
       }
     }
 
-    alert("\u0414\u043E\u0434\u0430\u0442\u043D\u0456\u0445 - ".concat(positiv, ", \u0432\u0456\u0434\u2019\u0454\u043C\u043D\u0438\u0445 - ").concat(negativ, ", \u043D\u0443\u043B\u0456\u0432 - ").concat(zero, ", \u043F\u0430\u0440\u043D\u0438\u0445 - ").concat(par, ", \u043D\u0435\u043F\u0430\u0440\u043D\u0438\u0445 - ").concat(notPar, "."));
-  }
+    i++;
+  } while (i <= 10);
+
+  alert("\u0414\u043E\u0434\u0430\u0442\u043D\u0456\u0445 - ".concat(positiv, ", \u0432\u0456\u0434\u2019\u0454\u043C\u043D\u0438\u0445 - ").concat(negativ, ", \u043D\u0443\u043B\u0456\u0432 - ").concat(zero, ", \u043F\u0430\u0440\u043D\u0438\u0445 - ").concat(par, ", \u043D\u0435\u043F\u0430\u0440\u043D\u0438\u0445 - ").concat(notPar, "."));
 } // Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
 
 
@@ -266,4 +275,84 @@ for (var i = 2; i <= 9; i++) {
   multy += '</ul>';
 }
 
-document.getElementById('multy_table').innerHTML = multy;
+document.getElementById('multy_table').innerHTML = multy; // Запитай дату (день, місяць, рік) і виведи наступну за нею дату. Враховуй можливість переходу на наступний місяць, рік, а також високосний рік.
+
+function task12() {
+  var day = parseInt(document.getElementById('day').value);
+  var month = parseInt(document.getElementById('month').value);
+  var year = parseInt(document.getElementById('year').value);
+
+  if (isNaN(day) || isNaN(month) || isNaN(year) || day >= 1 || day <= 31 || month >= 1 || month <= 12 || year >= 1970) {
+    alert("\u0412\u0438 \u0432\u0432\u0435\u043B\u0438 \u043D\u0435\u043A\u043E\u0440\u0435\u043A\u0442\u043D\u0456 \u0434\u0430\u043D\u0456.");
+    return;
+  }
+
+  var nDate = nextDay(day, month, year);
+  document.getElementById('date_result').innerHTML = "Next date is: ".concat(nDate);
+}
+
+function leapYear(y) {
+  return y % 4 === 0 && y % 100 !== 0 || y % 400 === 0;
+}
+
+var addZero = function addZero(n) {
+  return n < 10 ? '0' + n : '' + n;
+};
+
+function nextDay() {
+  var dayIn = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  var monthIn = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  var yearIn = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1970;
+  var dayOut = dayIn + 1,
+      monthOut = monthIn,
+      yearOut = yearIn;
+
+  switch (monthIn) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      if (dayIn === 31) {
+        dayOut = 1;
+        monthOut = monthIn + 1;
+      }
+
+      break;
+
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      if (dayIn === 30) {
+        dayOut = 1;
+        monthOut = monthIn + 1;
+      }
+
+      break;
+
+    case 2:
+      if (leapYear(yearIn)) {
+        if (dayIn === 29) {
+          dayOut = 1;
+          monthOut = monthIn + 1;
+        }
+      } else {
+        if (dayIn === 28) {
+          dayOut = 1;
+          monthOut = monthIn + 1;
+        }
+      }
+
+      break;
+  }
+
+  if (monthOut === 13) {
+    monthOut = 1;
+    yearOut = yearIn + 1;
+  }
+
+  return "".concat(addZero(dayOut), " / ").concat(addZero(monthOut), " / ").concat(yearOut);
+}

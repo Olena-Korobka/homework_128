@@ -1,58 +1,63 @@
 // Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
 
 function task1() {
-  const year = prompt(`Вкіжіть Ваш вік - і я скажу, хто Ви)`)
+  const year = prompt('Вкажіть Ваш вік - і я скажу, хто Ви)')
+  let res;
   if (year < 12) {
-    alert(`Ви дитина.`);
+    res = ('Ви дитина.');
   } else if (year >= 12 && year < 18) {
-    alert(`Ви підліток.`);
+    res = ('Ви підліток.');
   } else if (year >= 18 && year < 60) {
-    alert(`Ви дорослий.`);
+    res = ('Ви дорослий.');
   } else if (year >= 60 && year < 110) {
-    alert(`Ви пенсіонер.`);
+    res = ('Ви пенсіонер.');
   } else {
-    alert(`Ви ввели некоректні дані.`)
+    res = ('Ви ввели некоректні дані.')
+
   }
+  alert(`${res}`)
 }
 
 // Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
 
 function task2() {
   const numberSymbol = prompt(`Напишіть число від 0 до 9, а я покажу Вам спецсимвол, який розташований на цій клавіші.`);
+  let res;
   switch (numberSymbol) {
     case "1":
-      alert(`!`);
+      res = ('!');
       break;
     case "2":
-      alert(`@`);
+      res = ('@');
       break;
     case "3":
-      alert(`#`);
+      res = ('#');
       break;
     case "4":
-      alert(`$`);
+      res = ('$');
       break;
     case "5":
-      alert(`%`);
+      res = ('%');
       break;
     case "6":
-      alert(`^`);
+      res = ('^');
       break;
     case "7":
-      alert(`&`);
+      res = ('&');
       break;
     case "8":
-      alert(`*`);
+      res = ('*');
       break;
     case "9":
-      alert(`(`);
+      res('(');
       break;
     case "0":
-      alert(`)`);
+      res = (')');
       break;
     default:
-      alert(`Ви ввели некоректні дані.`);
+      res = ('Ви ввели некоректні дані.');
   }
+  alert(`${res}`)
 }
 
 
@@ -106,15 +111,15 @@ function task5() {
     return
   }
 
-  let x = '';
+  let result = '';
 
   for (let i = 1; i <= userNumber; i++) {
     if (userNumber % i == 0) {
-      x += ' ' + i
+      result += ' ' + i
     }
 
   }
-  alert(`Дільники цього числа: ${x}`)
+  alert(`Дільники цього числа: ${result}`)
 }
 
 
@@ -175,14 +180,15 @@ function task8() {
   let zero = 0;
   let par = 0;
   let notPar = 0;
-  for (let i = 1; i <= 10; i++) {
+  let i = 1;
+  do {
     let number = parseInt(prompt(`Напишіть ${i} числo`));
     if (isNaN(number)) {
       alert(`Ви ввели не числo.`);
-      return
+      continue
     }
 
-    if (number == 0) {
+    if (number === 0) {
       zero++
     } else if (number > 0) {
       positiv++
@@ -190,15 +196,17 @@ function task8() {
       negativ++
     }
     if (number !== 0) {
-      if (number % 2 == 0) {
+      if (number % 2 === 0) {
         par++
       } else {
         notPar++
       }
-
     }
-alert(`Додатніх - ${positiv}, від’ємних - ${negativ}, нулів - ${zero}, парних - ${par}, непарних - ${notPar}.`)
-  }
+
+    i++
+  } while (i <= 10)
+  alert(`Додатніх - ${positiv}, від’ємних - ${negativ}, нулів - ${zero}, парних - ${par}, непарних - ${notPar}.`)
+
 }
 
 
@@ -216,25 +224,25 @@ function task9() {
 
 
 // Гра «Вгадай число». Запропонуй користувачеві загадати число від 0 до 100 і відгадай його наступним способом: кожну ітерацію циклу діли діапазон чисел навпіл, записуй результат в N і питай у користувача «Ваше число> N, <N або == N?». Залежно від того що вказав користувач, зменшуй діапазон. Початковий діапазон від 0 до 100, поділи навпіл і отримай 50. Якщо користувач вказав, що його число> 50, то зміни діапазон на від 50 до 100. І так до тих пір, поки користувач не вибере == N (буде корисним почитати про алгоритм: "бінарний пошук").
-function task10(){
-  
-   let min = 0;
-   let max = 100;
-   let midle = 0;
-   let answer =0;
-  
+function task10() {
+
+  let min = 0;
+  let max = 100;
+  let midle = 0;
+  let answer = 0;
+
   do {
     midle = parseInt((min + max) / 2);
     if (confirm(`Ваше число больше ${midle}?`)) {
-       min = midle
-       answer= midle + 1
+      min = midle
+      answer = midle + 1
     } else {
-       max = midle
-       answer= midle
+      max = midle
+      answer = midle
     }
-   } while(max-min > 1);
-   alert (`Ви загадали ${answer}`)
-   
+  } while (max - min > 1);
+  alert(`Ви загадали ${answer}`)
+
 }
 
 
@@ -251,3 +259,78 @@ for (let i = 2; i <= 9; i++) {
   multy += '</ul>'
 }
 document.getElementById('multy_table').innerHTML = multy
+
+
+// Запитай дату (день, місяць, рік) і виведи наступну за нею дату. Враховуй можливість переходу на наступний місяць, рік, а також високосний рік.
+function task12() {
+  const day = parseInt(document.getElementById('day').value);
+  const month = parseInt(document.getElementById('month').value);
+  const year = parseInt(document.getElementById('year').value);
+
+  if (isNaN(day) || isNaN(month) || isNaN(year) || day>=1  || day<=31 || month>=1 || month<=12 || year>= 1970) {
+    alert(`Ви ввели некоректні дані.`);
+    return
+  }
+
+
+  const nDate = nextDay(day, month, year);
+document.getElementById('date_result').innerHTML = `Next date is: ${nDate}`
+}
+
+
+function leapYear(y) {
+  return y % 4 === 0 && y % 100 !== 0 || y % 400 === 0
+}
+
+const addZero = n => n< 10?'0'+n: ''+n
+
+function nextDay (dayIn=1, monthIn=1, yearIn=1970){
+  let dayOut = dayIn + 1,
+    monthOut = monthIn,
+    yearOut = yearIn;
+
+
+  switch (monthIn) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      if (dayIn === 31) {
+        dayOut = 1;
+        monthOut = monthIn + 1;
+      }
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      if (dayIn === 30) {
+        dayOut = 1;
+        monthOut = monthIn + 1;
+      }
+      break;
+    case 2:
+      if (leapYear(yearIn)) {
+        if (dayIn === 29) {
+          dayOut = 1;
+          monthOut = monthIn + 1;
+        }
+      } else {
+        if (dayIn === 28) {
+          dayOut = 1;
+          monthOut = monthIn + 1;
+        }
+      }
+      break;
+  }
+if(monthOut === 13){
+  monthOut = 1;
+  yearOut =yearIn + 1;
+}
+return `${addZero(dayOut)} / ${addZero(monthOut)} / ${yearOut}`
+
+}
+
