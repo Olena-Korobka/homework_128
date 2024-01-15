@@ -284,7 +284,7 @@ function task12() {
   var month = parseInt(document.getElementById('month').value);
   var year = parseInt(document.getElementById('year').value);
 
-  if (isNaN(day) || isNaN(month) || isNaN(year) || day >= 1 || day <= 31 || month >= 1 || month <= 12 || year >= 1970) {
+  if (isNaN(day) || isNaN(month) || isNaN(year) || day < 1 || day > 31 || month < 1 || month > 12 || year < 1970) {
     alert("\u0412\u0438 \u0432\u0432\u0435\u043B\u0438 \u043D\u0435\u043A\u043E\u0440\u0435\u043A\u0442\u043D\u0456 \u0434\u0430\u043D\u0456.");
     return;
   }

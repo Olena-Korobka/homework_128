@@ -268,7 +268,7 @@ function task12() {
   const month = parseInt(document.getElementById('month').value);
   const year = parseInt(document.getElementById('year').value);
 
-  if (isNaN(day) || isNaN(month) || isNaN(year) || day>=1  || day<=31 || month>=1 || month<=12 || year>= 1970) {
+  if (isNaN(day) || isNaN(month) || isNaN(year) || day<1  || day>31 || month<1 || month>12 || year< 1970) {
     alert(`Ви ввели некоректні дані.`);
     return
   }
