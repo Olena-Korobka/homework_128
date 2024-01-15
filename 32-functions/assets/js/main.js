@@ -71,7 +71,7 @@ function forFactorial() {
 // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
 
 function threeNumbers(a, b, c) {
-  return a * 100 + b * 20 + c;
+  return a * 100 + b * 10 + c;
 }
 
 function forThreeNumbers() {

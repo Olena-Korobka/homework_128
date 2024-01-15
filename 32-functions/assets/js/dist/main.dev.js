@@ -76,7 +76,7 @@ function forFactorial() {
 
 
 function threeNumbers(a, b, c) {
-  return a * 100 + b * 20 + c;
+  return a * 100 + b * 10 + c;
 }
 
 function forThreeNumbers() {
