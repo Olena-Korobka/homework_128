@@ -1,10 +1,32 @@
 const CART = [{
-        title: 'milk',
+        title: 'Milk',
+        isBue: true,
+        qty: 3,
+        price: 36.50
+    },
+    {
+        title: 'Beer',
+        isBue: false,
+        qty: 1,
+        price: 23.20
+    },
+    {
+        title: 'Bread',
+        isBue: false,
         qty: 2,
-        price: 25.5
-    }
+        price: 14.50
+    },
 
 ]
+
+// const sorted = CART.toSorted((a, b) => {
+//     return (a.qty * a.price) - (b.qty * b.price)
+// })
+
+// const sortedByName = CART.toSorted((a, b) => {
+//     return (a.title > b.title) ? 1 : a.title < b.title ? -1 : 0
+// })
+
 let editMode = false;
 let editId = null;
 
@@ -60,8 +82,6 @@ function addToCart() {
         toast.success('Product added')
     }
 
-
-
     _el('prod_title').value = '';
     _el('prod_qty').valueAsNumber = 1;
     _el('prod_price').value = '';
@@ -72,10 +92,15 @@ function addToCart() {
 
 function productList() {
     let tbody = '';
+    sortList();
     CART.forEach((prod, index) => {
+        const badge = prod.isBue ? '<span class="badge rounded-pill text-bg-success">Yes</span>' : '<span class="badge rounded-pill text-bg-danger">No</span>';
+
         tbody += `<tr>
             <td>${index + 1}</td>
             <td>${prod.title}</td>
+            <td>${badge} </td>
+            
             <td>
             <div class="input-group mb-3">
             <button class="btn btn-outline-secondary" type="button" onclick="changeQty(${index},'dec')">-</button>
@@ -85,9 +110,14 @@ function productList() {
         </td>
             <td>${prod.price.toFixed(2)}</td>
             <td>${(prod.qty * prod.price).toFixed(2)}</td>
-            <td>
+            <td>`
+        if (!prod.isBue){
+            tbody += `
             <button type='button' class='btn btn-info btn-sm' onclick='editProd(${index})'>edit</button>
-            <button type='button' class='btn btn-danger btn-sm' onclick='deleteProd(${index}, "${prod.title}")'>remove</button>
+            <button type='button' class='btn btn-primary btn-sm' onclick='byeProd(${index}, "${prod.title}")'>bye</button>
+            <button type='button' class='btn btn-danger btn-sm' onclick='deleteProd(${index}, "${prod.title}")'>remove</button>`
+        }
+        tbody += `
             </td>
         </tr>`;
     })
@@ -97,6 +127,16 @@ function productList() {
     _el('cart_disc').innerHTML = disc.toFixed(2)
 
 }
+
+function byeProd(index, title){
+    if(confirm(`Do you want to buy ${title}?`)){
+        CART[index].isBue = true;
+        productList();
+        toast.success(`Ok`)
+    } 
+}
+
+
 
 
 function editProd(index) {
@@ -108,7 +148,6 @@ function editProd(index) {
     _el('prod_qty').valueAsNumber = prod.qty;
     _el('prod_price').value = prod.price;
 }
-
 
 function deleteProd(index, title) {
     if (confirm(`Do you want to delete product ${title}?`)) {
@@ -124,10 +163,10 @@ function sumProduct() {
 
 function changeQty(index, action) {
     let qtyFirst = CART[index].qty;
+    CART[index].isBue = false;
+
     if (action === 'inc') {
         CART[index].qty++;
-
-
     } else if (action === 'dec') {
         if (qtyFirst === 1) {
             deleteProd(index, CART[index].title);
@@ -139,7 +178,7 @@ function changeQty(index, action) {
 }
 
 function applyDisc() {
-       const amount = _el('disc_amount').valueAsNumber;
+    const amount = _el('disc_amount').valueAsNumber;
     if (isNaN(amount)) {
         toast.error('Enter discount')
         return
@@ -147,15 +186,51 @@ function applyDisc() {
     productList();
 }
 
-function calcDisc(){
+function calcDisc() {
     const type = _el('disc_type').value;
     const amount = _el('disc_amount').valueAsNumber || 0;
     let sum = sumProduct()
     if (type === "percent") {
         return sum * amount / 100
-    } 
-    if (type ==="fixed"){
+    }
+    if (type === "fixed") {
         return amount
     }
     return 0
-} 
+}
+
+function sortList() {
+    const sort = _el('sorting').value;
+    // let sortFn = () => {};
+    // if (sort === 'subTotalAsc') {
+    //     sortFn = (a, b) => {
+    //         return (a.qty * a.price) - (b.qty * b.price);
+    //     }
+    //     return CART.toSorted()
+    // }
+    // if (sort === 'subTotalDesc') {
+    //     sortFn = (a, b) => {
+    //         return (b.qty * b.price) - (a.qty * a.price);
+    //     }
+    // }
+    // return CART.toSorted((a,b) => sortFn(a, b))
+
+    const sortFn = {
+        subTotalAsc: (a, b) => {
+            return (a.qty * a.price) - (b.qty * b.price)
+        },
+        subTotalDesc: (a, b) => {
+            return (b.qty * b.price) - (a.qty * a.price)
+        },
+        qtyAsc: (a, b) => {
+            return a.qty - b.qty;
+        },
+        qtyDesc: (a, b) => {
+            return b.qty - a.qty;
+        },
+        title: (a, b) => {
+            return a.title > b.title ? 1 : a.title < b.title ? -1 : 0;
+        }
+    }
+    CART.sort((a, b) => sortFn[sort](a, b))
+}

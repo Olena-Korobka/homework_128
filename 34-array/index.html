@@ -7,30 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <!-- <style>
-        /* .my-toast{
-            position: fixed;
-            left: 20px;
-            top: 20px;
-            border-radius: 10px;
-            padding: 15px;
-            background-color: #a0a0a0;
-        } */
-        .my-toast.success{
-            background-color: #198754;
-            color: #FFF;
-        }
-        .my-toast.error{
-            background-color: #dc3545;
-            color: #FFF;
-        }
-    </style> -->
+ 
 </head>
 
 <body>
-    <!-- <div class="my-toast success">
-        <p class="mb-0">Lorem ipsum dolor sit amet</p>
-    </div> -->
+   
     <div class="container">
         <div class="card mb-4">
             <div class="card-header">
@@ -88,11 +69,20 @@
                 <h3>Product list</h3>
             </div>
             <div class="card-body">
+                <select name="" id="sorting" class="form-control" onchange=" productList()">
+                    <option value="subTotalAsc">Sub total asc</option>
+                    <option value="subTotalDesc">Sub total desc</option>
+                    <option value="qtyAsc">Quantity asc</option>
+                    <option value="qtyDesc">Quantity desc</option>
+                    <option value="title">Title</option>
+                </select>
+
                 <table class="table">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Title</th>
+                            <th>Bought</th>
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Sub total</th>
@@ -102,12 +92,12 @@
                     <tbody id="cart_tbody"></tbody>
                     <tfoot>
                         <tr>
-                            <th colspan="4">Discount</th>
+                            <th colspan="5">Discount</th>
                             <th id="cart_disc"></th>
                             <th></th>
                         </tr>
                         <tr>
-                            <th colspan="4">Total</th>
+                            <th colspan="5">Total</th>
                             <th id="cart_total"></th>
                             <th></th>
                         </tr>
