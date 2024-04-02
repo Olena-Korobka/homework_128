@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvix-portfolio-example</title>
+    <link rel="stylesheet" href="assets/css/_portfolio-first.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/lazyload.min.js">  </script>
+</head>
+
+<body>
+    @@include('parts/header.html')
+
+    <main>
+        <!-- перша секція сторінка портфоліо 1-->
+        <div class="container">
+            <div class="photo-section ">
+                <div class="image-block">
+                    <img class="lazy"
+                        src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                        data-src="./assets/img/ui3-min.png" alt="Photo">
+                </div>
+                <div class="info-block">
+                    <ul>
+                        <li>
+                            <div class="info">
+                                <div class="title">Category:</div>
+                                <div class="text">Nature Solution</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Client</div>
+                                <div class="text">RGZ Corporation</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Date</div>
+                                <div class="text">May 05, 2023</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Location:</div>
+                                <div class="text">789 Willow Lane, Crestview</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <p>1. Advertising plays a key role in successfully promoting goods and services.
+                    Effective advertising contributes to increasing brand recognition.
+                    It is important to adapt advertising strategies to the target audience.
+                    Advertising helps attract new customers and retain existing ones. Advertising campaigns should be
+                    creative and memorable.
+                    Using social media allows delivering the advertising message to a wide audience.
+                    Careful advertising budget planning helps avoid unnecessary expenses.
+                    It is important to conduct analytics on the effectiveness of advertising campaigns to optimize
+                    results.</p>
+                <p>2.Advertising should be adapted to the market characteristics and competitive environment.
+                    Collaborating with influencers helps attract the attention of the younger audience.
+                    Advertising should be honest and transparent to maintain consumer trust.
+                    Innovative advertising methods can attract more attention to a product or service.
+                    Visual content plays an important role in an effective advertising campaign.
+                    Personalizing advertising allows creating a more attractive offer for each customer.
+                    Advertising should evoke an emotional response from the audience to remain memorable.
+                    Collaboration with professional agencies helps create a high-quality advertising campaign.
+                    Effective advertising is an important tool for achieving business goals and increasing profit.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    @@include('parts/footer.html')
+    <script src="assets/js/portfolio.js"></script>
+</body>
+
+</html>

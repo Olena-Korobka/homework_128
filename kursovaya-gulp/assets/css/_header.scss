@@ -1,0 +1,247 @@
+@import '_fonts';
+@import '_gamburger';
+
+$primary-color:rgb(100, 204, 197);
+
+ul,
+ol {
+    list-style: none;
+}
+a:hover svg {
+    path {
+        fill: $primary-color;
+    }
+}
+
+.container {
+    width: min(90%, 1400px);
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    z-index: 10;
+    background-color: #000000;
+    opacity: 0.7;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.btn button {
+    transition: all .2s ease;
+    color: rgba(12, 12, 12, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: rgb(251, 251, 251);
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    border-radius: 23px;
+    margin-top: 8px;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.logo {
+    margin-top: -14px;
+
+    .icon-wrap {
+        margin-bottom: -60px;
+
+        .black-icon {
+            display: none;
+        }
+    }
+
+    .black-icon,
+    .white-icon {
+        width: 140px;
+    }
+
+    a:hover {
+        .icon-wrap {
+            .white-icon {
+                display: none;
+            }
+
+            .black-icon {
+                display: block;
+            }
+        }
+    }
+}
+
+.nav_menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 42px;
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translate(-50%);
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: rgb(251, 251, 251);
+        font-family: 'DM Sans';
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-decoration: none;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 0;
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            height: 3px;
+            opacity: 0.3;
+            background: rgb(100, 204, 197);
+            transition: all .2s ease;
+            transform: translateX(-50%);
+        }
+
+        &:hover::after {
+            width: calc(100% + 4px)
+        }
+    }
+}
+
+a:hover svg {
+    path {
+        fill: $primary-color;
+    }
+}
+
+
+// бургер
+.hamburger {
+    display: none;
+}
+
+.hamburger-box {
+    margin-top: -4px;
+}
+
+.page_overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.7);
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+
+.menu_panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: rgba(25, 28, 41, 1);
+    z-index: 16;
+    transform: translateX(-100%);
+    transition: all .4s ease;
+
+    .nav-humb {
+
+        a {
+            color: #FFF;
+            display: inline-block;
+            width: 100%;
+            font-size: 1.7rem;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+
+        .btn {
+            margin-left: 20px;
+            a{
+              padding: 0;
+              margin-bottom: 0px;
+            color: #000;  
+            }
+            
+        }
+    }
+
+    .panel_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        height: 80px;
+        background-color: #010209;
+        margin-bottom: 20px;
+
+        .logo {
+            margin-top: -60px;
+        }
+    }
+
+    nav {
+        overflow-y: auto;
+        height: calc(100vh - 40px);
+    }
+}
+
+.open_mobile_menu {
+    .page_overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu_panel {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .hamburger {
+        display: block;
+    }
+
+    .header {
+        .nav_menu {
+            display: none;
+        }
+
+    }
+
+    .btn-humb {
+        display: none;
+    }
+}
+
+

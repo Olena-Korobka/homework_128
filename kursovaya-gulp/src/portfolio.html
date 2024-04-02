@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvix-portfolio</title>
+
+    <link rel="stylesheet" href="assets/css/_portfolio.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/lazyload.min.js">  </script>
+</head>
+
+<body>
+    @@include('parts/header.html')
+
+    <main>
+        <!-- перша секція сторінка портфоліо-->
+        <section class="recent">
+            <div class="container">
+                <h2>Our Portfolio</h2>
+                <div class="recent-card">
+                    <div class="recent-card-left">
+                        <a href="./portfolio-first.html">
+                            <div class="image-container">
+                                <img class="lazy"
+                                    src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                                    data-src="./assets/img/ui1-min.png" alt="Photo">
+                            </div>
+                            <h3>Web UI design</h3>
+                            <div class="recent-card-text">Creative UI design</div>
+                        </a>
+                        <a href="./portfolio-second.html">
+                            <div class="image-container">
+                                <img class="lazy"
+                                    src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                                    data-src="./assets/img/ui3-min.png" alt="Photo">
+                            </div>
+                            <h3>UI Design</h3>
+                            <div class="recent-card-text">Creative Rebranding for logo</div>
+                        </a>
+                        <a href="./portfolio-third.html">
+                            <div class="image-container">
+                                <img class="lazy"
+                                    src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                                    data-src="./assets/img/ui5-min.png" alt="Photo">
+                            </div>
+                            <h3>Graphic design</h3>
+                            <div class="recent-card-text">Graphic design
+                            </div>
+                        </a>
+                    </div>
+                    <div class="recent-card-right">
+                        <a href="./portfolio-fourth.html">
+                            <div class="image-container">
+                                <img class="lazy"
+                                    src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                                    data-src="./assets/img/ui2-min.png" alt="Photo">
+                            </div>
+                            <h3>To design Digital Strategy</h3>
+                            <div class="recent-card-text">Social Media Marketing
+                            </div>
+                        </a>
+                        <a href="./portfolio-fifth.html">
+                            <div class="image-container">
+                                <img class="lazy"
+                                    src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                                    data-src="./assets/img/ui4-min.png" alt="Photo">
+                            </div>
+                            <h3>UI Design</h3>
+                            <div class="recent-card-text">Creative Rebranding for images</div>
+                        </a>
+                        <a href="./portfolio-sixth.html">
+                            <div class="image-container">
+                                <img class="lazy"
+                                    src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                                    data-src="./assets/img/ui6-min.png" alt="Photo">
+                            </div>
+                            <h3>UI Design</h3>
+                            <div class="recent-card-text">Creative Rebranding for images</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('parts/footer.html')
+
+    <script src="assets/js/portfolio.js"></script>
+</body>
+</html>

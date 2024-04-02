@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvix-portfolio-example</title>
+    <link rel="stylesheet" href="assets/css/_portfolio-first.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/lazyload.min.js">  </script>
+</head>
+
+<body>
+    @@include('parts/header.html')
+
+    <main>
+        <!-- перша секція сторінка портфоліо 1-->
+        <div class="container">
+            <div class="photo-section ">
+                <div class="image-block">
+                    <img class="lazy"
+                        src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                        data-src="./assets/img/ui1-min.png" alt="Photo">
+                </div>
+                <div class="info-block">
+                    <ul>
+                        <li>
+                            <div class="info">
+                                <div class="title">Category:</div>
+                                <div class="text">Cloud solution</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Client</div>
+                                <div class="text">BrightMedia Solutions</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Date</div>
+                                <div class="text">August 23, 2023</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Location:</div>
+                                <div class="text">489 Depot Road Midland</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <p>1. Our design project is the result of meticulous work by a team of professionals aimed at creating a
+                    modern and functional interface. We pay special attention to every detail to provide the best user
+                    experience and maximum satisfaction of our clients' needs.</p>
+                <p>2. In the process of designing, we use cutting-edge technologies and tools to achieve the optimal
+                    combination of aesthetics and practicality. Our goal is to create a unique and memorable look for
+                    each project that will help attract and retain audience attention.</p>
+                <p>3. We strive for innovation and constantly seek new approaches to design to stay at the forefront of
+                    technological progress. Our team is ready to bring the boldest ideas to life and create unique
+                    solutions that will help our clients stand out in the market. Our design project aims to create a
+                    modern and attractive visual identity for various purposes. We take into account the individual
+                    needs of each client, striving to emphasize the uniqueness and values of their brand through design.
+                    In the process, we use the latest trends and technologies to ensure high quality and efficiency of
+                    the project.</p>
+            </div>
+        </div>
+    </main>
+
+    @@include('parts/footer.html')
+    <script src="assets/js/portfolio.js"></script>
+</body>
+
+</html>

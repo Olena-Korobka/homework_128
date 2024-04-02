@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvix-contact</title>
+    <link rel="stylesheet" href="./assets/plugins/leaflet/leaflet.css">
+    <link rel="stylesheet" href="./assets/css/_contact.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/lazyload.min.js">  </script>
+</head>
+
+<body>
+    @@include('parts/header.html')
+
+    <main>
+        <section class="contact-us">
+            <div class="container">
+                <div class="contact-block">
+                    <div class="social">
+                        <h3>Let’s talk</h3>
+                        <p>We collaborate with thousands of creators, entrepreneurs and complete legends.</p>
+                        <ul>
+                            <li>
+                                <img src="./assets/img/cont1.svg" alt="logo">
+                                <span class="title-contact">
+                                    Our email
+                                    <div class="type-contact"><a
+                                            href="mailto:lenchik.shevchenko0110@gmail.com">lenchik.shevchenko0110@gmail.com</a>
+                                    </div>
+                                </span>
+                            </li>
+                            <li>
+                                <img src="./assets/img/cont2.svg" alt="logo">
+                                <span class="title-contact">
+                                    Call us
+                                    <div class="type-contact"><a href="tel:+380960202111">+380960202111</a></div>
+                                </span>
+                            </li>
+                            <li>
+                                <img src="./assets/img/cont3.svg" alt="logo">
+                                <span class="title-contact">
+                                    Find us
+                                    <div class="type-contact"><a href="https://www.google.com/maps?q=United+States">Open
+                                            Google
+                                            Maps</a></div>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form" id="form">
+                        <form action="#" method="post">
+                            <div class="form-text">
+                                <input id="name" name="name" type="text" placeholder=" ">
+                                <label for="name">Your name</label>
+                            </div>
+                            <div class="form-text">
+                                <input id="email" name="email" type="email" placeholder=" " required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-text">
+                                <input id="text" name="text" type="text" placeholder=" ">
+                                <label for="text">Message</label>
+                            </div>
+                            <div class="button ">
+                                <button type="submit" class="btn-text"> Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div id="map">
+                <a href="#" class="map_link" onclick="initMap(this)">
+                    <img class="lazy"
+                        src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                        data-src="./assets/img/my-map.PNG" alt="map">
+                    <span>Click to interactive map</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    @@include('parts/footer.html')
+
+    <script src="./assets/plugins/leaflet/leaflet.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

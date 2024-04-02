@@ -1,0 +1,21 @@
+{
+  "name": "gulp-html",
+  "version": "1.0.0",
+  "description": "gulp html project",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "keywords": [
+    "gulp",
+    "learning",
+    "project"
+  ],
+  "author": "%username%",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.3.0"
+  }
+}

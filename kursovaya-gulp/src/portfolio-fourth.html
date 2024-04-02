@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvix-portfolio-example</title>
+    <link rel="stylesheet" href="assets/css/_portfolio-first.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/lazyload.min.js">  </script>
+</head>
+
+<body>
+    @@include('parts/header.html')
+
+    <main>
+        <!-- перша секція сторінка портфоліо 1-->
+        <div class="container">
+            <div class="photo-section ">
+                <div class="image-block">
+                    <img class="lazy"
+                        src="data:image/gif;base64,R0lGODlhBAADAIAAAP///wAAACH5BAEAAAEALAAAAAAEAAMAAAIDjI9WADs="
+                        data-src="./assets/img/ui2-min.png" alt="Photo">
+                </div>
+                <div class="info-block">
+                    <ul>
+                        <li>
+                            <div class="info">
+                                <div class="title">Category:</div>
+                                <div class="text">Spase design</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Client</div>
+                                <div class="text">Sarah Wilson</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Date</div>
+                                <div class="text">October 01, 2023</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <div class="title">Location:</div>
+                                <div class="text">315 Elm Street, Hillcrest</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <p>1. Aesthetic and functional website design play a crucial role in shaping user experience.
+                    An appealing website design can encourage users to take action, thus increasing conversion.
+                    Visual elements of the website should be aligned with the business goals and strategy.
+                    Website design should reflect and support the company's corporate identity. </p>
+                <p>2. Clearly defined design elements help manage user attention and emphasize key messages.
+                    Consistent website design and advertising campaigns create a unified brand identity.
+                    Advertising on the website should be integrated organically, matching the overall style and design
+                    goals.
+                    Website design should be responsive across various devices and screens for optimal display.
+                    Effective website design considers the needs and preferences of the target audience.
+                    Advertising elements on the website should maintain a cohesive style with the page design.
+                    Optimizing website design for SEO helps improve its visibility in search results.
+                    Website design should support easy navigation and quick access to essential information.</p>
+                <p>3. Visual elements of the website should highlight the key advantages of the brand over competitors.
+                    Quality website design is a critical factor for successfully attracting and retaining customers
+                    online.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    @@include('parts/footer.html')
+    <script src="assets/js/portfolio.js"></script>
+</body>
+
+</html>
