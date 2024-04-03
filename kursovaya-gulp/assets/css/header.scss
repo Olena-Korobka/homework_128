@@ -1,5 +1,5 @@
-@import '_fonts';
-@import '_gamburger';
+@import 'fonts';
+@import 'gamburger';
 
 $primary-color:rgb(100, 204, 197);
 
@@ -18,7 +18,7 @@ a:hover svg {
     margin: 0 auto;
 }
 
-header {
+header { 
     position: fixed;
     left: 0;
     top: 0;
