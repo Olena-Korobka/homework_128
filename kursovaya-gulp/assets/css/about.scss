@@ -197,7 +197,6 @@ a:hover svg {
             text-decoration: none;
             background-color: #eaeaea;
             border-radius: 20px;
-            -webkit-transition: background-color 0.2s;
             transition: background-color 0.2s;
             cursor: pointer;
         }
@@ -229,7 +228,6 @@ a:hover svg {
         background-color: #dddcdc;
         border-radius: 50%;
         border: 1px solid $primary-color;
-        -webkit-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out;
     }
 

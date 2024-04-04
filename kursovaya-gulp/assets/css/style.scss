@@ -20,7 +20,8 @@ ol {
 
 img {
     vertical-align: top;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 a,
@@ -188,7 +189,8 @@ a:hover svg {
                 border-radius: 50%;
                 max-width: 100%;
                 height: auto;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
 
             }
         }
@@ -299,7 +301,8 @@ h2 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         row-gap: 66px;
-        column-gap: 80px;
+        -moz-column-gap: 80px;
+             column-gap: 80px;
         justify-content: space-around;
         margin-bottom: 90px;
     }
@@ -771,10 +774,14 @@ h2 {
 
 //анімація
 .animate__flash {
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-delay: 2s;
-    animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
 }
 
 
@@ -849,7 +856,8 @@ h2 {
     .card_second_section {
         .block {
             row-gap: 0;
-            column-gap: 40px;
+            -moz-column-gap: 40px;
+                 column-gap: 40px;
             justify-content: space-around;
             margin-bottom: 60px;
 

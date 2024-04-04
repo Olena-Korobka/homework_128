@@ -21,7 +21,8 @@ ol {
 
 img {
     vertical-align: top;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 a,
@@ -96,7 +97,8 @@ button {
             display: block;
             transition: all .4s ease;
             max-width: 100%;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
 
