@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var screenPosition = window.innerHeight;
 
     if (elementPosition < screenPosition) {
-      animateNumber(numberElement, 0, 332, 4000); // From 0 to 330 in 2 seconds
+      animateNumber(numberElement, 0, 332, 2000); // From 0 to 330 in 2 seconds
 
       numberElement.style.opacity = '1'; // Показать элемент
     }

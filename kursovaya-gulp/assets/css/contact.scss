@@ -12,8 +12,8 @@ $primary-color:rgb(100, 204, 197);
     margin: 0;
     box-sizing: border-box;
 }
- 
-ul, 
+
+ul,
 ol {
     list-style: none;
 }
@@ -21,12 +21,12 @@ ol {
 img {
     vertical-align: top;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 a,
 button {
-      cursor: pointer;
+    cursor: pointer;
 }
 
 .container {
@@ -70,7 +70,7 @@ button {
 
         h3 {
             font-family: 'Roboto Serif';
-            font-size: 4rem;
+            font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 600;
             line-height: 75px;
             letter-spacing: 0%;
@@ -136,7 +136,7 @@ button {
     }
 }
 
-form {
+.form {
     background-color: #F4F4F4;
     padding: 20px 40px;
     border-radius: 20px;
@@ -145,7 +145,7 @@ form {
 .form-text {
     display: flex;
     flex-direction: column-reverse;
-    width: 470px;
+
 }
 
 input {
@@ -153,9 +153,9 @@ input {
     padding: 12px;
     margin-top: 8px;
     border-bottom: 1px solid #3d3c3c;
-    background-color: #F4F4F4;
     border-radius: 10px;
-    outline: none;
+    outline: 0;
+    background: transparent;
 }
 
 label {
@@ -181,7 +181,7 @@ input:focus~label,
 input:not(:placeholder-shown)~label {
     padding: 0;
     color: $primary-color;
-    transform: translateY(1.8rem) scale(0.8);
+    transform: translateY(1.5rem) scale(0.8);
 }
 
 .form {
@@ -225,14 +225,14 @@ input:not(:placeholder-shown)~label {
         position: relative;
         display: block;
         text-decoration: none;
+        height: 100%;
 
         img {
             width: 100%;
             height: 100%;
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
             border-radius: 20px;
-
         }
 
         span {
@@ -240,7 +240,7 @@ input:not(:placeholder-shown)~label {
             align-items: center;
             justify-content: center;
             background-color: $primary-color;
-            opacity: 0.7;
+            opacity: 0;
             color: #000;
             font-size: 2rem;
             font-family: 'Roboto Serif';
@@ -252,15 +252,14 @@ input:not(:placeholder-shown)~label {
             z-index: 1;
             width: 100%;
             height: 100%;
-            transition: all 0.3 ease;
+            transition: all 0.3s ease;
 
             &:hover {
-                opacity: 0.3;
+                opacity: 0.7;
             }
         }
     }
 }
-
 
 @media screen and (max-width: 1050px) {
     .contact-us {
@@ -271,9 +270,6 @@ input:not(:placeholder-shown)~label {
         }
     }
 
-    .form-text {
-        width: 350px;
-    }
 }
 
 @media screen and (max-width: 950px) {
@@ -309,13 +305,12 @@ input:not(:placeholder-shown)~label {
         }
     }
 
-    form {
+    .form {
         padding: 10px 20px;
     }
 }
 
 @media screen and (max-width: 850px) {
-    
 
     .contact-block {
         display: block;
@@ -334,14 +329,21 @@ input:not(:placeholder-shown)~label {
         }
     }
 
-    form {
-        width: 400px;
+    .form {
+        width: 100%;
         margin: 0 auto 40px;
     }
 }
 
 @media screen and (max-width: 650px) {
     #map {
-        aspect-ratio: 2/1;
+        aspect-ratio: unset;
+        height: 400px;
+
+        .map_link {
+            span {
+                font-size: 1.2rem;
+            }
+        }
     }
 }

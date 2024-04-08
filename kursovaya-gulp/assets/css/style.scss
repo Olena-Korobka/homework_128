@@ -21,12 +21,12 @@ ol {
 img {
     vertical-align: top;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 a,
 button {
-       cursor: pointer;
+    cursor: pointer;
 }
 
 .container {
@@ -34,16 +34,19 @@ button {
     margin: 0 auto;
 }
 
+main {
+    padding-bottom: 50px;
+}
+
 header {
     position: fixed;
     left: 0;
-    top:0;
+    top: 0;
     width: 100%;
     height: 56px;
     z-index: 10;
     background-color: #000000;
     opacity: 0.7;
-    
 
     .container {
         display: flex;
@@ -67,8 +70,9 @@ header {
 
     &:hover {
         background-color: $primary-color;
-           }
-    a{
+    }
+
+    a {
         text-decoration: none;
         color: #000;
     }
@@ -171,12 +175,9 @@ a:hover svg {
             width: min(90%, 1400px);
             margin: 0 auto;
             display: grid;
-            padding-left: 34px;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            margin-top: -44px;
-            margin-bottom: 100px;
-            padding-top: 104px;
+            padding-top: 60px;
         }
 
         .photo_hero_section {
@@ -190,7 +191,7 @@ a:hover svg {
                 max-width: 100%;
                 height: auto;
                 -o-object-fit: cover;
-                   object-fit: cover;
+                object-fit: cover;
 
             }
         }
@@ -201,6 +202,7 @@ a:hover svg {
     color: rgb(251, 251, 251);
     margin-top: 90px;
     position: relative;
+  
 
     h1 {
         font-family: 'Roboto Serif';
@@ -257,7 +259,7 @@ a:hover svg {
 
     a:hover {
         path {
-            fill:$primary-color;
+            fill: $primary-color;
         }
     }
 
@@ -302,7 +304,7 @@ h2 {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 66px;
         -moz-column-gap: 80px;
-             column-gap: 80px;
+        column-gap: 80px;
         justify-content: space-around;
         margin-bottom: 90px;
     }
@@ -542,7 +544,6 @@ h2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-
     }
 
     img {
@@ -576,25 +577,28 @@ h2 {
 
     .button {
         margin-bottom: 40px;
-        border-radius: 20px;
-        padding: 10px;
-        background-color: #F4F4F4;
-        border: 1px solid #000000;
-        font-family: 'Roboto Serif';
-        font-size: 1.2rem;
-        width: 130px;
-        text-align: right;
 
-        &:hover {
-            background-color: $primary-color;
+        a {
+            border-radius: 20px;
+            padding: 10px 20px;
+            background-color: #F4F4F4;
+            border: 1px solid #000000;
+            font-family: 'Roboto Serif';
+            font-size: 1.2rem;
+            display: inline-block;
+            text-align: right;
         }
 
         .btn-text {
-            padding: 10px;
             font-family: 'Roboto Serif';
             font-size: 1.125rem;
             text-decoration: none;
             color: #010209;
+
+            &:hover {
+                background-color: $primary-color;
+                transition: all .2s ease;
+            }
         }
     }
 
@@ -608,7 +612,7 @@ h2 {
     margin-bottom: 100px;
 
     #bxslider li {
-        background-color: #F4F4F4;
+        background-color: #F4F4F4, ;
         text-align: center;
         border-radius: 20px;
 
@@ -647,7 +651,7 @@ h2 {
             font-weight: 400;
             line-height: 21px;
             letter-spacing: 3%;
-            padding-bottom: 100px; 
+            padding-bottom: 100px;
         }
     }
 }
@@ -676,8 +680,6 @@ h2 {
         display: none;
     }
 }
-
-
 
 // бургер
 .hamburger {
@@ -731,12 +733,12 @@ h2 {
 
         .btn {
             margin-left: 20px;
-            a{
-              padding: 0;
-              margin-bottom: 0px;
-            color: #000;  
+
+            a {
+                padding: 0;
+                margin-bottom: 0px;
+                color: #000;
             }
-            
         }
     }
 
@@ -771,19 +773,17 @@ h2 {
     }
 }
 
-
 //анімація
 .animate__flash {
     -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
+    animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    animation-delay: 2s;
     -webkit-animation-duration: 4s;
-            animation-duration: 4s;
+    animation-duration: 4s;
 }
-
 
 @media screen and (max-width: 1200px) {
     .hero_section {
@@ -857,7 +857,7 @@ h2 {
         .block {
             row-gap: 0;
             -moz-column-gap: 40px;
-                 column-gap: 40px;
+            column-gap: 40px;
             justify-content: space-around;
             margin-bottom: 60px;
 
@@ -872,7 +872,7 @@ h2 {
     }
 
     .icon-wrap {
-        margin-bottom: 22px;
+        margin-bottom: 0;
     }
 
     .about_us {
@@ -902,39 +902,38 @@ h2 {
             font-size: 2rem;
         }
     }
-        .process {
-            margin-top: 10px;
-            margin-bottom: 50px;
 
-            .container {
-                .text_green_color {
-                    margin-bottom: 20px;
-                }
-            }
+    .process {
+        margin-top: 10px;
+        margin-bottom: 50px;
 
-            .card-box ul {
-                margin-bottom: 50px;
-                gap: 54px;
-            }
-
-            .arrow-right {
-
-                right: -15%;
+        .container {
+            .text_green_color {
+                margin-bottom: 20px;
             }
         }
 
-        .bx-wrapper {
-            .bx-prev {
-                left: 45%;
-            }
+        .card-box ul {
+            margin-bottom: 50px;
+            gap: 54px;
+        }
 
-            .bx-next {
-                right: 45%;
-            }
+        .arrow-right {
+
+            right: -15%;
         }
     }
 
+    .bx-wrapper {
+        .bx-prev {
+            left: 45%;
+        }
 
+        .bx-next {
+            right: 45%;
+        }
+    }
+}
 
 @media screen and (max-width: 970px) {
     .hero_section {
@@ -954,7 +953,7 @@ h2 {
         .background {
             .background_bg {
                 margin-bottom: 50px;
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: 100%;
                 gap: 0px;
             }
         }
@@ -968,7 +967,8 @@ h2 {
             }
         }
     }
-     h2 {
+
+    h2 {
         font-size: 2.2rem;
     }
 
@@ -992,12 +992,11 @@ h2 {
         }
     }
 }
-   
+
 @media screen and (max-width: 850px) {
     .hamburger {
         display: block;
     }
-
 
     .header {
         .nav_menu {
@@ -1012,18 +1011,17 @@ h2 {
 
     .card_second_section {
         .block {
-
             grid-template-columns: repeat(2, 1fr);
-
         }
     }
 
-.about_us{
-    .box-slider {
-        width: 400px;
-        height: 400px;
+    .about_us {
+        .box-slider {
+            width: 400px;
+            height: 400px;
+        }
     }
-}
+
     .about_us_content {
         margin-left: 10px;
 
@@ -1034,7 +1032,6 @@ h2 {
 
     .process {
         .card-box ul {
-
             grid-template-columns: repeat(2, 1fr);
             gap: 94px;
         }
@@ -1042,7 +1039,6 @@ h2 {
         .process-content-block {
 
             .process-content {
-
                 padding: 40px 20px 20px;
             }
         }
@@ -1073,7 +1069,6 @@ h2 {
             }
 
             .name {
-
                 font-size: 1rem;
                 margin-bottom: 6px;
             }
@@ -1085,7 +1080,7 @@ h2 {
                 font-weight: 400;
                 line-height: 21px;
                 letter-spacing: 3%;
-                padding-bottom: 100px; 
+                padding-bottom: 100px;
             }
         }
     }
@@ -1095,7 +1090,6 @@ h2 {
         .bx-controls-direction a {
             top: 80%;
         }
-
     }
 
     .recent {
@@ -1107,8 +1101,6 @@ h2 {
             margin-top: 100px;
         }
     }
-
-    
 }
 
 @media screen and (max-width: 750px) {
@@ -1131,7 +1123,6 @@ h2 {
 
             p {
                 font-family: 'DM Sans';
-                font-size: 0.8rem;
                 margin-bottom: 80px;
             }
         }
@@ -1160,19 +1151,19 @@ h2 {
             font-size: 1.2rem;
         }
     }
+
     .about_us_bg {
-       
+
         padding-bottom: 60px;
     }
+
     .about_us {
         padding-top: 60px;
 
-       
-            .box-slider {
-                width: 320px;
-                height: 320px;
-            }
-        
+        .box-slider {
+            width: 320px;
+            height: 320px;
+        }
 
         .about_us_content {
             margin-left: 20px;
@@ -1210,8 +1201,7 @@ h2 {
             }
 
             p {
-                font-size: 0.8rem;
-                line-height: 16px;
+                line-height: 18px;
             }
         }
 
@@ -1239,12 +1229,10 @@ h2 {
         }
 
         .recent-card-text {
-            font-size: 10px;
+            font-size: 1rem;
             margin-bottom: 50px;
         }
     }
-
-   
 }
 
 @media screen and (max-width: 650px) {
@@ -1260,11 +1248,16 @@ h2 {
     .brands {
         .icon-wrap {
             margin-left: 10px;
+        }
 
-            .black-icon,
-            .white-icon {
-                width: 80px;
+        ul {
+            margin-top: 5px;
+            padding-bottom: 0;
+            text-align: center;
+            flex-wrap: wrap;
 
+            li {
+                width: 46%;
             }
         }
     }
@@ -1298,7 +1291,7 @@ h2 {
 
         }
     }
-    }
+}
 
 @media screen and (max-width: 550px) {
     .hero_section {
@@ -1338,16 +1331,18 @@ h2 {
                 font-size: 1.4rem;
             }
         }
+    }
 
-        .process-content-block {
-            .process-content {
+    .process-content-block {
 
-                padding: 50px 20px 20px;
-            }
+        .process-content {
+            padding: 50px 20px 20px;
         }
+    }
 
-        .arrow-right {
-            display: none;
+    .process {
+        .media {
+            display: block;
         }
     }
 
@@ -1370,18 +1365,24 @@ h2 {
         }
 
         .size-l {
-            display: none;
+            a {
+                display: none;
+            }
         }
     }
 
     .process {
         .card-box ul {
             grid-template-columns: repeat(1, 1fr);
-            gap: 50px;
+            gap: 80px;
         }
 
         .arrow-right {
-            display: none;
+            right: auto;
+            left: calc(50% - 9px);
+            transform: rotate(45deg);
+            top: auto;
+            bottom: -30px;
         }
 
         .process-content-block {
@@ -1391,18 +1392,8 @@ h2 {
         }
     }
 }
-    
-@media screen and (max-width: 450px) {
-    .brands {
-        .icon-wrap {
-            margin-left: 5px;
 
-            .black-icon,
-            .white-icon {
-                width: 60px;
-            }
-        }
-    }
+@media screen and (max-width: 450px) {
 
     .process {
         padding-top: 20px;
